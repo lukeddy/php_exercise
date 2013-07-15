@@ -10,10 +10,27 @@ Target Server Type    : MYSQL
 Target Server Version : 50096
 File Encoding         : 65001
 
-Date: 2013-07-08 11:32:43
+Date: 2013-07-15 20:13:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `blog`
+-- ----------------------------
+DROP TABLE IF EXISTS `blog`;
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(300) default NULL,
+  `content` text,
+  `date` date default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of blog
+-- ----------------------------
+INSERT INTO `blog` VALUES ('1', 'sdfsdf', 'sdfdsfsd', '2013-07-01');
 
 -- ----------------------------
 -- Table structure for `users`
